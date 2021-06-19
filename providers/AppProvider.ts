@@ -1,4 +1,4 @@
-import { Context, Provider } from '@discord-factory/core'
+import { CommandEntity, Context, EventEntity, Provider } from '@discord-factory/core'
 
 export default class AppProvider implements Provider {
   public async boot(): Promise<void> {
@@ -6,7 +6,12 @@ export default class AppProvider implements Provider {
   }
 
   public async loadFile(context: Context): Promise<void> {
-    // Your code here
+    const file = {
+      command: () => console.log(`Loading ${(context as CommandEntity).label}`),
+      event: () => console.log(`Loading ${(context as EventEntity<any>).event}`),
+    }
+
+    file[context.type!]()
   }
 
   public async ready(): Promise<void> {
