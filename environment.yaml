@@ -1,0 +1,17 @@
+APP_TOKEN: "Nzg1ODgxOTk1NDc2ODYwOTc5.X8-TpA.lPD3PeUQk8eDmdUCQf87fFgmd7w"
+APP_PREFIX: "!"
+
+PARTIALS:
+  - MESSAGE
+  - CHANNEL
+  - REACTION
+
+PRESETS:
+  COMMAND_AUTO_REMOVE: true
+
+MESSAGES:
+  COMMAND_MISSING_PERMISSION: "You're not authorized to execute this command"
+  COMMAND_MISSING_ROLES: "You're not authorized to execute this command"
+  ENVIRONMENT_FILE_PREFIX_MISSING: "The prefix is missing in the environment file."
+  ENVIRONMENT_FILE_TOKEN_MISSING: "The token is missing in the environment file."
+  ENVIRONMENT_FILE_MISSING: "Environment file is missing, please create one."
