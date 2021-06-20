@@ -12,6 +12,7 @@ export default class MessageDelete implements BaseEvent {
 				title: 'Suppression d\'un message',
 				color: '#93C5FD',
 				fields: [
+					{ name: 'Channel', value: message.channel },
 					{ name: 'Contenu du message', value: message.content || 'Content cannot be load' }
 				]
 			})
