@@ -12,7 +12,7 @@ export default class MessageDelete implements BaseEvent {
 				title: 'Suppression d\'un message',
 				color: '#93C5FD',
 				fields: [
-					{ name: 'Contenu du message', value: message.content }
+					{ name: 'Contenu du message', value: message.content || 'Content cannot be load' }
 				]
 			})
 		)
